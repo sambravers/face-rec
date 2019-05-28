@@ -3,4 +3,4 @@
 *.jpeg
 *.jpg
 *.pdf
-__pycache__/"
+__pycache__/*
