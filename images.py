@@ -23,6 +23,9 @@ def batch_load(dir_string):
     return imgs
 
 def shuffle_in_unison(a, b):
+    '''
+    Takes two arrays and shuffles them randomly, but in unison, the same way
+    '''
     assert len(a) == len(b)
     shuffled_a = np.empty(a.shape, dtype=a.dtype)
     shuffled_b = np.empty(b.shape, dtype=b.dtype)
@@ -41,6 +44,9 @@ def show_image(img):
     cv2.destroyAllWindows()
 
 def show_eval(model, arr, labels, num_eval):
+    '''
+    Shows a round of evaluation on a model, given a test array and its labels
+    '''
     indices = np.random.randint(0, high=len(arr), size=(num_eval))
     for index in indices:
         test_shape = (-1, arr[index].shape[0], arr[index].shape[1], arr[index].shape[2]) 
