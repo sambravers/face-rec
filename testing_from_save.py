@@ -11,8 +11,8 @@ this network for their own personal use.
 '''
 
 # Load numpy arrays to save time
-x = np.load("data/x_file.npy")
-y = np.load("data/y_file.npy")
+x = np.load("data/144/x_file.npy")
+y = np.load("data/144/y_file.npy")
 
 # Shuffle the images and labels in unison
 x, y = shuffle_in_unison(x, y)
@@ -21,7 +21,7 @@ x, y = shuffle_in_unison(x, y)
 x_tr, x_te, y_tr, y_te = train_test_split(x, y, test_size=(1/3), random_state=0)
 
 # Load saved model
-model = tf.keras.models.load_model("models/demo.h5")
+model = tf.keras.models.load_model("models/144/demo.h5")
 
 # Evaluate
 model.evaluate(x_te, y_te)
