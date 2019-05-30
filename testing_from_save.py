@@ -27,7 +27,7 @@ model = tf.keras.models.load_model("models/demo.h5")
 model.evaluate(x_te, y_te)
 
 # Import accept images with out-of-training-set backgrounds
-x_te = batch_load("data/me_outdoor/")
-y_te = np.array([ [0, 1] for _ in range(len(x_te))])
+#x_te = batch_load("data/me_outdoor/")
+#y_te = np.array([ [0, 1] for _ in range(len(x_te))])
 
 show_eval(model, x_te, y_te, 10)
