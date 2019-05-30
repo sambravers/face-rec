@@ -43,7 +43,8 @@ def show_image(img):
 def show_eval(model, arr, labels, num_eval):
     indices = np.random.randint(0, high=len(arr), size=(num_eval))
     for index in indices:
-        prediction = np.around(model.predict(arr[index].reshape((-1, arr[index].shape[0], arr[index].shape[1], arr[index].shape[2])))).reshape((2)).astype(int)
+        test_shape = (-1, arr[index].shape[0], arr[index].shape[1], arr[index].shape[2]) 
+        prediction = np.around(model.predict(arr[index].reshape(test_shape))).reshape((2)).astype(int)
         if np.array_equal(prediction, labels[index]):
             if np.array_equal(labels[index], [1, 0]):
                 print("The model correctly rejected this user!")
