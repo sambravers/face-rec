@@ -44,7 +44,7 @@ model.add(layers.Conv2D(16, (2, 2), activation='relu'))
 model.add(layers.MaxPooling2D((2, 2)))
 model.add(layers.Conv2D(8, (2, 2), activation='relu'))
 model.add(layers.Flatten())
-model.add(layers.Dense(16, activation='relu'))
+model.add(layers.Dense(8, activation='relu'))
 model.add(layers.Dense(2, activation='softmax'))
 
 # Summary
